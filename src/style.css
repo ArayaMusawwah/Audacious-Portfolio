@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .transition-span{
+        transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0s, 0.3s margin ease-in 0s;
+    }
+
+    .section-style{
+        @apply h-screen bg-center bg-cover flex items-center justify-center relative p-12 font-bold text-3xl after:content-[]
+        after:absolute after:bg-black/10 after:opacity-50 after:h-full after:w-full after:top-0 after:left-0
+    }
+
+    .containerr.menu-open{
+        @apply blur-md scale-125
+    }
+
+    .transition-a{
+        transition: 0.1s all cubic-bezier(0.080, 0.9, 0.18, 1) 0.6s, 0.3s color ease;
+    }
+
+    header.stick #logo{
+        @apply opacity-0
+    }
+
+    header.stick nav{
+        @apply top-5 p-0 w-24 h-24 
+    }
+
+    header.stick nav button{
+        @apply scale-100 delay-200
+    }
+
+    header.stick nav button span{
+        @apply scale-x-100;
+        transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0.8s, 0.1s margin ease-in 0s; 
+    }
+
+    header.stick nav a{
+        @apply opacity-0 scale-50 delay-100
+    }
+}
