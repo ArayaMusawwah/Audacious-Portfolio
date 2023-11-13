@@ -8,12 +8,12 @@
     }
 
     .section-style{
-        @apply h-screen bg-center bg-cover flex items-center justify-center relative p-12 font-bold text-3xl after:content-[]
+        @apply h-screen w-auto bg-center bg-cover flex items-center justify-center relative p-12 font-bold text-3xl after:content-[] scale-100
         after:absolute after:bg-black/10 after:opacity-50 after:h-full after:w-full after:top-0 after:left-0
     }
 
     .containerr.menu-open{
-        @apply blur-md scale-125
+        @apply blur-md
     }
 
     .transition-a{
