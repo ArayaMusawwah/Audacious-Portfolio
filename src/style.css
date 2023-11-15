@@ -13,7 +13,7 @@
     }
 
     .containerr.menu-open{
-        @apply blur-md
+        @apply blur-md;
     }
 
     .transition-a{
@@ -25,7 +25,7 @@
     }
 
     header.stick nav{
-        @apply top-5 p-0 w-24 h-24 
+        @apply top-3 lg:top-6 p-0 w-16 h-16 lg:w-24 lg:h-24 
     }
 
     header.stick nav button{
