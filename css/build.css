@@ -603,6 +603,9 @@ video {
 }
 
 .containerr.menu-open {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-blur: blur(12px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -616,7 +619,7 @@ header.stick #logo {
 }
 
 header.stick nav {
-  top: 0.75rem;
+  top: 2rem;
   height: 4rem;
   width: 4rem;
   padding: 0px;
@@ -624,7 +627,6 @@ header.stick nav {
 
 @media (min-width: 1024px) {
   header.stick nav {
-    top: 1.5rem;
     height: 6rem;
     width: 6rem;
   }
@@ -679,12 +681,12 @@ header.stick nav a {
   top: 0px;
 }
 
-.top-24 {
-  top: 6rem;
+.top-32 {
+  top: 8rem;
 }
 
-.top-4 {
-  top: 1rem;
+.top-8 {
+  top: 2rem;
 }
 
 .z-\[100\] {
@@ -911,14 +913,6 @@ header.stick nav a {
 }
 
 @media (min-width: 1024px) {
-  .lg\:top-32 {
-    top: 8rem;
-  }
-
-  .lg\:top-8 {
-    top: 2rem;
-  }
-
   .lg\:h-20 {
     height: 5rem;
   }
