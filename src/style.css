@@ -3,41 +3,52 @@
 @tailwind utilities;
 
 @layer components {
-    .transition-span{
-        transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0s, 0.3s margin ease-in 0s;
-    }
+  * {
+    @apply motion-reduce:transition;
+    font-family: "Roboto", sans-serif;
+  }
 
-    .section-style{
-        @apply h-screen w-auto bg-center bg-cover flex items-center justify-center relative p-12 font-bold text-3xl after:content-[] scale-100
-        after:absolute after:bg-black/10 after:opacity-50 after:h-full after:w-full after:top-0 after:left-0
-    }
+  .transition-span {
+    transition:
+      0.6s transform cubic-bezier(0.08, 0.9, 0.18, 1) 0s,
+      0.3s margin ease-in 0s;
+  }
 
-    .containerr.menu-open{
-        @apply blur-md scale-105;
-    }
+  .section-style {
+    @apply relative flex h-screen w-auto scale-100 items-center justify-center bg-cover bg-center p-12 text-3xl font-bold after:absolute
+        after:left-0 after:top-0 after:h-full after:w-full after:bg-black/10 after:opacity-50 after:content-[];
+  }
 
-    .transition-a{
-        transition: 0.1s all cubic-bezier(0.080, 0.9, 0.18, 1) 0.6s, 0.3s color ease;
-    }
+  .containerr.menu-open {
+    @apply scale-105 blur-md;
+  }
 
-    header.stick #logo{
-        @apply opacity-0
-    }
+  .transition-a {
+    transition:
+      0.1s all cubic-bezier(0.08, 0.9, 0.18, 1) 0.6s,
+      0.3s color ease;
+  }
 
-    header.stick nav{
-        @apply top-8 p-0 w-16 h-16 lg:w-24 lg:h-24 
-    }
+  header.stick #logo {
+    @apply opacity-0;
+  }
 
-    header.stick nav button{
-        @apply scale-100 delay-200
-    }
+  header.stick nav {
+    @apply top-8 h-16 w-16 p-0 lg:h-24 lg:w-24;
+  }
 
-    header.stick nav button span{
-        @apply scale-x-100;
-        transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0.8s, 0.1s margin ease-in 0s; 
-    }
+  header.stick nav button {
+    @apply scale-100 delay-200;
+  }
 
-    header.stick nav a{
-        @apply opacity-0 scale-50 delay-100
-    }
+  header.stick nav button span {
+    @apply scale-x-100;
+    transition:
+      0.6s transform cubic-bezier(0.08, 0.9, 0.18, 1) 0.8s,
+      0.1s margin ease-in 0s;
+  }
+
+  header.stick nav a {
+    @apply scale-50 opacity-0 delay-100;
+  }
 }

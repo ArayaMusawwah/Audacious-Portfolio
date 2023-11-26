@@ -568,8 +568,24 @@ video {
   }
 }
 
-.transition-span{
-  transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0s, 0.3s margin ease-in 0s;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.transition-span {
+  transition:
+      0.6s transform cubic-bezier(0.08, 0.9, 0.18, 1) 0s,
+      0.3s margin ease-in 0s;
 }
 
 .section-style {
@@ -592,8 +608,8 @@ video {
 
 .section-style::after {
   position: absolute;
-  top: 0px;
   left: 0px;
+  top: 0px;
   height: 100%;
   width: 100%;
   background-color: rgb(0 0 0 / 0.1);
@@ -610,8 +626,10 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition-a{
-  transition: 0.1s all cubic-bezier(0.080, 0.9, 0.18, 1) 0.6s, 0.3s color ease;
+.transition-a {
+  transition:
+      0.1s all cubic-bezier(0.08, 0.9, 0.18, 1) 0.6s,
+      0.3s color ease;
 }
 
 header.stick #logo {
@@ -642,7 +660,9 @@ header.stick nav button {
 header.stick nav button span {
   --tw-scale-x: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transition: 0.6s transform cubic-bezier(0.080, 0.9, 0.18, 1) 0.8s, 0.1s margin ease-in 0s;
+  transition:
+      0.6s transform cubic-bezier(0.08, 0.9, 0.18, 1) 0.8s,
+      0.1s margin ease-in 0s;
 }
 
 header.stick nav a {
@@ -728,8 +748,8 @@ header.stick nav a {
   height: 3.5rem;
 }
 
-.h-\[4px\] {
-  height: 4px;
+.h-\[3px\] {
+  height: 3px;
 }
 
 .h-auto {
@@ -777,10 +797,6 @@ header.stick nav a {
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.scroll-smooth {
-  scroll-behavior: smooth;
 }
 
 .rounded-full {
@@ -915,6 +931,10 @@ header.stick nav a {
 @media (min-width: 1024px) {
   .lg\:h-20 {
     height: 5rem;
+  }
+
+  .lg\:h-\[4px\] {
+    height: 4px;
   }
 
   .lg\:w-20 {
